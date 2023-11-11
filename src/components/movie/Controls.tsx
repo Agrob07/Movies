@@ -1,18 +1,21 @@
+import { BsFillPlayFill } from "react-icons/bs"
+
 const Controls = () => {
   const buttons = [
     {
       id: 0,
       text: "play",
-      icon: "#",
+      icon: <BsFillPlayFill />,
       style:
-        "p-2 text-sm font-bold capitalize border-2 bg-white rounded-xl text-black",
+        "flex items-center justify-between p-2 text-sm font-bold capitalize  bg-white rounded-xl text-black hover:bg-gray-400",
       onclick: () => {},
     },
     {
       id: 1,
       text: "more info",
       icon: "",
-      style: "p-2 text-sm font-bold capitalize border-2 bg-blue-500 rounded-xl",
+      style:
+        "p-2 text-sm font-bold capitalize  bg-blue-700 rounded-xl hover:bg-blue-600",
       onclick: () => {},
     },
   ]

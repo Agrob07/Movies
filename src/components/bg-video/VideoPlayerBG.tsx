@@ -6,7 +6,7 @@ const VideoPlayerBG = () => {
   const { featured } = useMovies()
 
   useEffect(() => {
-    setTimeout(() => setDelay(!delay), 3000) // 2s is too short let's go with 3s
+    setTimeout(() => setDelay(!delay), 3000)
   }, [delay])
   return delay ? (
     <video

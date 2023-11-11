@@ -7,7 +7,7 @@ const Controls = () => {
       text: "play",
       icon: <BsFillPlayFill />,
       style:
-        "flex items-center justify-between p-2 text-sm font-bold capitalize  bg-white rounded-xl text-black hover:bg-gray-400",
+        "flex items-center justify-between p-5 px-8 text-lg font-bold capitalize  bg-white rounded-full text-black hover:bg-gray-400",
       onclick: () => {},
     },
     {
@@ -15,7 +15,7 @@ const Controls = () => {
       text: "more info",
       icon: "",
       style:
-        "p-2 text-sm font-bold capitalize  bg-blue-700 rounded-xl hover:bg-blue-600",
+        "p-5 text-lg font-bold capitalize  bg-blue-700 rounded-full hover:bg-blue-600",
       onclick: () => {},
     },
   ]

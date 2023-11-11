@@ -6,6 +6,7 @@ import { IMovieItem } from "../../types/movies"
 export interface MoviesState {
   featured: Partial<IMovieItem>
   trending: IMovieItem[]
+  opacity: number
   status: string
 }
 
@@ -15,6 +16,7 @@ const initialState: MoviesState = {
     Title: "no featured movies yet",
   },
   trending: [],
+  opacity: 1,
   status: "idle",
 }
 
@@ -39,6 +41,9 @@ export const moviesSlice = createSlice({
         ...state.trending.filter((movie) => movie.Id !== action.payload.Id),
       ]
     },
+    setBgOpacity: (state, action) => {
+      state.opacity = action.payload
+    },
   },
 
   extraReducers: (builder) => {
@@ -57,9 +62,11 @@ export const moviesSlice = createSlice({
   },
 })
 
-export const { setFeatured, reorderTrending } = moviesSlice.actions
+export const { setFeatured, reorderTrending, setBgOpacity } =
+  moviesSlice.actions
 
 export const selectFeatured = (state: RootState) => state.movies.featured
 export const selectTrending = (state: RootState) => state.movies.trending
+export const selectOpacity = (state: RootState) => state.movies.opacity
 
 export default moviesSlice.reducer
